@@ -1,4 +1,4 @@
-package com.conorstephens.diceroller;
+package com.conorstephens.diceroller.ui.history;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,18 +9,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.conorstephens.diceroller.R;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
+public class RollHistoryAdapter extends RecyclerView.Adapter<RollHistoryAdapter.ViewHolder> {
 
-    private static final String TAG = HistoryAdapter.class.getSimpleName();
+    private static final String TAG = RollHistoryAdapter.class.getSimpleName();
     private ArrayList<JSONObject> mHistory;
     private final Context mActivity;
 
-    public HistoryAdapter(Context context, ArrayList<JSONObject> mHistory) {
+    public RollHistoryAdapter(Context context, ArrayList<JSONObject> mHistory) {
         this.mActivity = context;
         this.mHistory = mHistory;
     }

@@ -1,4 +1,4 @@
-package com.conorstephens.diceroller;
+package com.conorstephens.diceroller.ui.history;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
+
+import com.conorstephens.diceroller.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,7 +20,7 @@ public class RollHistoryActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private ArrayList<JSONObject> mHistory;
-    private HistoryAdapter mHistoryAdapter;
+    private RollHistoryAdapter mHistoryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +69,7 @@ public class RollHistoryActivity extends AppCompatActivity {
             }
 
             if (mHistory != null) {
-                mHistoryAdapter = new HistoryAdapter(this, mHistory);
+                mHistoryAdapter = new RollHistoryAdapter(this, mHistory);
                 mRecyclerView.setAdapter(mHistoryAdapter);
             }
         }
